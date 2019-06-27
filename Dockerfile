@@ -1,5 +1,5 @@
 #Imagem base
-FROM ruby:2.6.3-alpine
+FROM ruby:2.6.3
 
 #Assinatura
 MAINTAINER Rodrigo Martins
@@ -18,6 +18,9 @@ COPY project.yml ${project_folder}/
 
 #Muda para a pasta do projeto
 RUN cd ${project_folder}
+
+#lista o conteúdo da pasta
+RUN ls
 
 #Executa o teste unitário
 RUN ceedling test:all
