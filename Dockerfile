@@ -10,18 +10,17 @@ RUN gem install ceedling -v 0.28.3
 #Determina uma variável com o nome da pasta que será criada a estrutura do projeto
 ENV project_folder Test
 
+RUN mkdir /usr/work/${project_folder}/
+
+WORKDIR /usr/work/${project_folder}/
+
 #Cria o diretório de projeto
-RUN ceedling new ${project_folder}
+RUN ceedling new --local /usr/work/${project_folder}/
 
 #Copia o project.yml para a a pasta destino
-COPY project.yml ${project_folder}/
+COPY project.yml /usr/work/${project_folde
 
-#Muda para a pasta do projeto
-RUN cd ${project_folder}
-
-#lista o conteúdo da pasta
-RUN ls
 
 #Executa o teste unitário
-RUN ceedling test:all
+CMD ["ceedling", "test:all"]
 
