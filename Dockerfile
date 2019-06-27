@@ -19,4 +19,5 @@ COPY project.yml ${project_folder}/
 #Muda para a pasta do projeto
 RUN cd ${project_folder}
 
-
+#Executa o teste unitário
+RUN ceedling test:all
