@@ -21,3 +21,4 @@ RUN cd ${project_folder}
 
 #Executa o teste unitário
 RUN ceedling test:all
+
