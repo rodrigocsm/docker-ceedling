@@ -19,5 +19,4 @@ COPY project.yml ${project_folder}/
 #Muda para a pasta do projeto
 RUN cd ${project_folder}
 
-#Finaliza disponibilizando o bash
-CMD /bin/bash
+
