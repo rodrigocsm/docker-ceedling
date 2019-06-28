@@ -18,7 +18,7 @@ WORKDIR /usr/work/${project_folder}/
 RUN ceedling new --local /usr/work/${project_folder}/
 
 #Copia o project.yml para a a pasta destino
-COPY project.yml /usr/work/${project_folde
+COPY project.yml /usr/work/${project_folder}/
 
 
 #Executa o teste unitário
