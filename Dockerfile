@@ -22,5 +22,5 @@ RUN ceedling new .
 COPY project.yml /usr/work/${project_folder}/
 
 #Executa o teste unitário
-CMD ["ceedling", "test:all"]
+RUN ceedling clobber gcov:all utils:gcov
 
