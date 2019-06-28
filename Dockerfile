@@ -9,8 +9,8 @@ RUN gem install ceedling -v 0.28.3
 
 #Instala o gcovr
 RUN apt-get update -y
-RUN apt-get install -y python3.4 python3-pip
-RUN pip3.4 install gcovr
+RUN apt-get install -y python python-pip
+RUN pip install gcovr
 
 #Determina uma variável com o nome da pasta que será criada a estrutura do projeto
 ENV project_folder Test
