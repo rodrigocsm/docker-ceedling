@@ -20,6 +20,7 @@ RUN ceedling new --local /usr/work/${project_folder}/
 #Copia o project.yml para a a pasta destino
 COPY project.yml /usr/work/${project_folder}/
 
+RUN cd /usr/work/${project_folder}/ && ls
 
 #Executa o teste unitário
 CMD ["ceedling", "test:all"]
