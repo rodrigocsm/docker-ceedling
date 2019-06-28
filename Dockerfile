@@ -8,7 +8,8 @@ MAINTAINER Rodrigo Martins
 RUN gem install ceedling -v 0.28.3
 
 #Instala o gcovr
-RUN apt-get install python3-pip
+RUN apt-get update -y
+RUN apt-get install -y python3-pip
 RUN pip install gcovr
 
 #Determina uma variável com o nome da pasta que será criada a estrutura do projeto
