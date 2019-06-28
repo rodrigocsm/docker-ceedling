@@ -10,7 +10,7 @@ RUN gem install ceedling -v 0.28.3
 #Determina uma variável com o nome da pasta que será criada a estrutura do projeto
 ENV project_folder Test
 
-RUN mkdir /usr/work/${project_folder}/
+RUN mkdir -p /usr/work/${project_folder}/
 
 WORKDIR /usr/work/${project_folder}/
 
