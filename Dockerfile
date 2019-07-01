@@ -23,8 +23,8 @@ RUN gem install ceedling -v 0.28.3
 RUN apt-get update && apt-get install -y python python-pip && python -m pip install gcovr
 
 #Copia os arquivos para a imagem
-COPY src ${project_folder}/src
-COPY test ${project_folder}/test
+COPY src* ${project_folder}/src
+COPY test* ${project_folder}/test
 
 #Cria o diretório de projeto
 RUN cd ${project_folder}
